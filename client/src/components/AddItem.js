@@ -15,7 +15,7 @@ class AddItem extends Component {
     })
     return (
       <div>
-        <h3>Add projects</h3>
+        <h3>Add project</h3>
 
             <label>Category</label><br />
             <select ref="category">
