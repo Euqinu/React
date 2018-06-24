@@ -7,9 +7,13 @@ class ProjectItem extends Component {
     return (
       <li className="Project">
     <strong>  {this.props.project.title}</strong> : {this.props.project.category}
+     <span onClick={this.handleDelete}> x </span>
 
       </li>
     );
+  }
+  handleDelete(){
+    this.props.onDelete(this.props.project);
   }
 }
 

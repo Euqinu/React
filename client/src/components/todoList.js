@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 
 class App extends Component {
     render() {
@@ -39,7 +39,7 @@ class StreetFighter extends Component {
             </div>
         );
     }
-    onDelete=(chosenCharacter)=> {
+    onDelete(chosenCharacter) {
         let updatedCharactersList = this.state.characters.filter(
             (char, index) => {
                 return chosenCharacter !== char;
@@ -67,7 +67,7 @@ class Character extends Component {
         )
     };
 
-    handleDelete=()=> {
+    handleDelete() {
         this.props.onDelete(this.props.char);
     }
 }

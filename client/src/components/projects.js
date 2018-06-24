@@ -11,10 +11,11 @@ class Projects extends Component {
       // eslint-disable-next-line
       projectItems=this.props.projects.map(project =>{
         return(
-          <ProjectItem key={project.title} project={project} />
+          <ProjectItem key={project.title} project={project}  />
         );
 
       });
+
     }
 
 
@@ -22,9 +23,17 @@ class Projects extends Component {
     return (
       <div className="MyProjects">
         {projectItems}
+        <span>Hello, Click Click</span>
+
+        <span> x</span>
         </div>
     );
   }
-}
+
+  }
+
+
+
+
 
 export default Projects;
