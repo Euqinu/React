@@ -1,31 +1,17 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
 
-
-class AddItem extends Component {
-  static defaultProps={
-    categories:['web design','coding','studying']
+class Additem extends Component{
+  render(){
+    return(
+      <form onSubmit={this.handleSubmit}>
+      <input type="text" ref="newItem" />
+      <input type="submit" value="submit" />
+      </form>
+    )
   }
-  render() {
-    let addItem=this.props.categories.map(function(item){
-      return(
-        <option key={item} value="item">{item}</option>
-      )
-    })
-    return (
-      <div>
-        <h3>Add project</h3>
-
-            <label>Category</label><br />
-            <select ref="category">
-            {addItem}
-            </select>
-          </div>
-
-    );
-
+  handleSubmit=(e)=>{
+    e.preventDefault();
+    this.props.onAdd(this.refs.newItem.value);
+  }
 }
-}
-
-export default AddItem;
+export default Additem;
